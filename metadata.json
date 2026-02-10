@@ -1,0 +1,5 @@
+{
+  "name": "Cocone Diary (心音日記)",
+  "description": "An AI-powered emotional diary that analyzes your mood and prescribes the perfect Spotify track. Features a calming, adaptive mesh gradient UI.",
+  "requestFramePermissions": []
+}
