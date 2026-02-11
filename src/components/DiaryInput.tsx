@@ -25,9 +25,9 @@ const DiaryInput: React.FC<DiaryInputProps> = ({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex-1 flex flex-col"
+        className="flex-1 flex flex-col min-h-0" 
       >
-        <div className="mb-6 text-center">
+        <div className="mb-4 md:mb-6 text-center shrink-0">
           <h1 className="text-2xl font-light text-gray-800 tracking-widest mb-1">
             心音日記
           </h1>
@@ -36,13 +36,13 @@ const DiaryInput: React.FC<DiaryInputProps> = ({
           </p>
         </div>
 
-        <div className="flex-1 relative group mb-4">
+        <div className="flex-1 relative group mb-4 min-h-0">
           <textarea
             value={value}
             onChange={(e) => onChange(e.target.value)}
             disabled={isAnalyzing}
             placeholder="今日はどんな一日でしたか？..."
-            className="w-full h-full min-h-[300px] bg-white/40 backdrop-blur-md rounded-3xl p-6 text-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-sm resize-none transition-all duration-300 border border-white/30"
+            className="w-full h-full min-h-[200px] md:min-h-[300px] bg-white/40 backdrop-blur-md rounded-3xl p-6 text-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-sm resize-none transition-all duration-300 border border-white/30"
             style={{
                 boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.05 )"
             }}
@@ -50,7 +50,7 @@ const DiaryInput: React.FC<DiaryInputProps> = ({
         </div>
         
         {/* Controls Section */}
-        <div className="space-y-6">
+        <div className="space-y-6 relative z-20 shrink-0">
           {/* Toggle Switch */}
           <div className="bg-white/30 backdrop-blur-md p-1 rounded-full flex relative shadow-inner border border-white/20 max-w-xs mx-auto">
             <motion.div

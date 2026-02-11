@@ -18,7 +18,7 @@ interface EmotionChartProps {
 const EmotionChart: React.FC<EmotionChartProps> = ({ emotions, color }) => {
   const data = Object.entries(emotions).map(([key, value]) => ({
     subject: EMOTION_LABELS[key],
-    A: value * 100,
+    A: (value as number) * 100,
     fullMark: 100,
   }));
 
